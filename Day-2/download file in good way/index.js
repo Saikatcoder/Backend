@@ -5,9 +5,18 @@ const fs = require('fs');
 const server = http.createServer((req,res)=>{
 
     // download file in good way✅\
-    const readableStream = fs.createReadStream("sample.txt");
-    readableStream.pipe(res);
-    // res.end()
+    // const readableStream = fs.createReadStream("sample.txt");
+    // readableStream.pipe(res);
+    // // res.end()
+
+
+    const readStrem = fs.createReadStream("sample.txt");
+    const writeStream = fs.createWriteStream("output.txt");
+
+    readStrem.on("data", (chunk)=>{
+        console.log("CHUNK" , chunk);
+        writeStream.write(chunk);
+    })
 });
 
 server.listen(8000 , ()=>{
