@@ -10,6 +10,11 @@ const server = http.createServer((req,res)=>{
     // // res.end()
 
 
+    // download file in bad way��\
+
+
+
+    // download file in good way (stream)
     const readStrem = fs.createReadStream("sample.txt");
     const writeStream = fs.createWriteStream("output.txt");
 
