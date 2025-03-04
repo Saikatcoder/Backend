@@ -181,7 +181,6 @@ Summary
 ✔ Can be built-in, custom, or third-party.
 ✔ Order matters – middleware executes in sequence.
 
-Would you like help implementing middleware in your project? 🚀
 
 
 
