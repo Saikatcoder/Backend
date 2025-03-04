@@ -1,17 +1,10 @@
 import express from 'express';
+import userRouter from './Routers/user.routes.js';
 const app =  express();
 
+app.use("/api/v1/users",userRouter);
 
-function sayHiMiddleware(req, res, next){
-    console.log("Hello i am middleware😁");
-    next();
-}
 
-app.use(sayHiMiddleware);
-
-app.get('/user', (req, res) => {
-    console.log("hello");
-})
 
 app.get('/',(req,res)=>{
     res.send("Hellow world!");
