@@ -53,7 +53,7 @@ Types of Global Middleware in Express.js
 1️⃣ Built-in Middleware (Comes with Express)
 Express provides some built-in middleware that can be used globally.
 
-📌 Example: express.json() (Parses JSON body)
+**📌 Example: express.json() (Parses JSON body)**
 js
 Copy
 Edit
@@ -61,14 +61,14 @@ app.use(express.json());
 ✅ Ensures that incoming JSON data in req.body is parsed.
 ✅ Required for handling POST and PUT requests with JSON payloads.
 
-📌 Example: express.urlencoded() (Parses form data)
+**📌 Example: express.urlencoded() (Parses form data)**
 js
 Copy
 Edit
 app.use(express.urlencoded({ extended: true }));
 ✅ Parses form data sent using application/x-www-form-urlencoded.
 
-📌 Example: express.static() (Serves static files)
+**📌 Example: express.static() (Serves static files)**
 js
 Copy
 Edit
@@ -78,7 +78,7 @@ app.use(express.static("public"));
 2️⃣ Custom Global Middleware
 You can create custom middleware to apply logic globally.
 
-📌 Example: Logging Middleware
+**📌 Example: Logging Middleware**
 js
 Copy
 Edit
@@ -86,7 +86,7 @@ app.use((req, res, next) => {
     console.log(`Request: ${req.method} ${req.url}`);
     next(); // Pass control to the next middleware or route
 });
-📌 Example: Authentication Middleware
+**📌 Example: Authentication Middleware**
 js
 Copy
 Edit
@@ -101,7 +101,7 @@ app.use((req, res, next) => {
 3️⃣ Third-Party Global Middleware
 Express allows you to use third-party middleware like morgan, cors, and helmet.
 
-📌 Example: Using morgan for Logging
+**📌 Example: Using morgan for Logging**
 js
 Copy
 Edit
@@ -121,7 +121,7 @@ app.use(cors()); // Enables CORS for all routes
 
 Order of Middleware Execution
 Middleware runs in the order they are defined in your code.
-📌 Example:
+**📌 Example:**
 
 js
 Copy
