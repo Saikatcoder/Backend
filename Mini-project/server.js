@@ -26,7 +26,7 @@ app.use(logMiddleware)
 
 // ?Middleware to routes
 app.use("/public",publicRouter)
-app.use('private', privaterouter)
+app.use('/private', privaterouter)
 app.listen(PORT, ()=>{
     console.log(`listening on ${PORT}`);
     

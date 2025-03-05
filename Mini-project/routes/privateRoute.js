@@ -1,12 +1,12 @@
 import { Router } from "express";
+import authMiddleware from "../middleware/authMiddleware.js";
 
 const privaterouter = Router();
 
 // dashbord
-privaterouter.get("/dashbord", (req,res)=>{
+privaterouter.get("/dashbord",authMiddleware, (req,res)=>{
     res.status(200).send({
-        message: 'Welcome to Dashbord Page',
-        accesstoken: req.headers.accesstoken
+        message: `welcome to dashbord ${req.user.name}`
     });
 })
 
